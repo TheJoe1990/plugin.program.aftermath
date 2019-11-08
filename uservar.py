@@ -1,24 +1,21 @@
 import os, xbmc, xbmcaddon
 
-#########################################################
-### Global Variables ####################################
-#########################################################
+# Dont need to edit just here for icons stored locally
 PATH           = xbmcaddon.Addon().getAddonInfo('path')
 ART            = os.path.join(PATH, 'resources', 'art')
-#########################################################
 
 #########################################################
 ### User Edit Variables #################################
 #########################################################
 ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
-ADDONTITLE     = '[B][COLOR dodgerblue]Aftermath[/COLOR][/B] Wizard'
-BUILDERNAME    = 'Aftermath'
-EXCLUDES       = [ADDON_ID, 'repository.aftermath']
+ADDONTITLE     = 'The Joe Wizard'
+BUILDERNAME    = 'The Joe'
+EXCLUDES       = [ADDON_ID, 'repository.thejoe', 'plugin.program.thejoewizard']
 # Enable/Disable the text file caching with 'Yes' or 'No' and age being how often it rechecks in minutes
 CACHETEXT      = 'Yes'
 CACHEAGE       = 30
 # Text File with build info in it.
-BUILDFILE      = 'http://'
+BUILDFILE      = 'https://raw.githubusercontent.com/TheJoe1990/thejoe1990.github.io/master/wizard/builds.txt'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 0
@@ -28,13 +25,12 @@ APKFILE        = 'http://'
 YOUTUBETITLE   = ''
 YOUTUBEFILE    = 'http://'
 # Text File for addon installer.  Leave as 'http://' to ignore
-ADDONFILE      = 'http://'
+ADDONFILE      = 'https://raw.githubusercontent.com/TheJoe1990/thejoe1990.github.io/master/wizard/addons.txt'
 # Text File for advanced settings.  Leave as 'http://' to ignore
 ADVANCEDFILE   = 'http://'
-#########################################################
 
 #########################################################
-### Theming Menu Items ##################################
+### THEMING MENU ITEMS ##################################
 #########################################################
 # If you want to use locally stored icons the place them in the Resources/Art/
 # folder of the wizard then use os.path.join(ART, 'imagename.png')
@@ -54,7 +50,7 @@ ICONREAL       = os.path.join(ART, 'keepdebrid.png')
 ICONLOGIN      = os.path.join(ART, 'keeplogin.png')
 ICONCONTACT    = os.path.join(ART, 'information.png')
 ICONSETTINGS   = os.path.join(ART, 'settings.png')
-# Hide the section seperators 'Yes' or 'No'
+# Hide the ====== seperators 'Yes' or 'No'
 HIDESPACERS    = 'No'
 # Character used in seperator
 SPACER         = '='
@@ -78,16 +74,15 @@ THEME5         = '[COLOR '+COLOR1+']Current Theme:[/COLOR] [COLOR '+COLOR2+']%s[
 # Enable 'Contact' menu item 'Yes' hide or 'No' dont hide
 HIDECONTACT    = 'No'
 # You can add \n to do line breaks
-CONTACT        = 'Thank you for choosing Aftermath Wizard.\n\nContact us on Github at http://www.github.com/drinfernoo/plugin.program.aftermath/'
+CONTACT        = 'Thank you for choosing TheJoe Wizard'
 #Images used for the contact window.  http:// for default icon and fanart
-CONTACTICON    = os.path.join(ART, 'qricon.png')
+CONTACTICON    = 'http://'
 CONTACTFANART  = 'http://'
 #########################################################
 
 #########################################################
-### Auto Update                   #######################
-###        For Those With No Repo #######################
-#########################################################
+### AUTO UPDATE #########################################
+########## FOR THOSE WITH NO REPO #######################
 # Enable Auto Update 'Yes' or 'No'
 AUTOUPDATE     = 'Yes'
 # Url to wizard version
@@ -95,31 +90,30 @@ WIZARDFILE     = BUILDFILE
 #########################################################
 
 #########################################################
-### Auto Install                 ########################
-###        Repo If Not Installed ########################
-#########################################################
+### AUTO INSTALL ########################################
+########## REPO IF NOT INSTALLED ########################
 # Enable Auto Install 'Yes' or 'No'
 AUTOINSTALL    = 'Yes'
 # Addon ID for the repository
 REPOID         = 'repository.aftermath'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML   = 'https://raw.githubusercontent.com/drinfernoo/repository.aftermath/master/zips/addons.xml'
+REPOADDONXML   = 'https://raw.githubusercontent.com/TheJoe1990/thejoe1990.github.io/master/plugins/addon.xml'
 # Url to folder zip is located in
-REPOZIPURL     = 'https://raw.githubusercontent.com/drinfernoo/repository.aftermath/master/zips/repository.aftermath/'
+REPOZIPURL     = 'https://github.com/TheJoe1990/thejoe1990.github.io/raw/master/plugins/repository.thejoe/repository.thejoe-1.0.zip'
 #########################################################
 
 #########################################################
-### Notification Window #################################
+### NOTIFICATION WINDOW##################################
 #########################################################
 # Enable Notification screen Yes or No
 ENABLE         = 'Yes'
 # Url to notification file
-NOTIFICATION   = 'http://'
+NOTIFICATION   = 'https://raw.githubusercontent.com/TheJoe1990/thejoe1990.github.io/master/wizard/notify.txt'
 # Use either 'Text' or 'Image'
 HEADERTYPE     = 'Text'
 # Font size of header
 FONTHEADER     = 'Font14'
-HEADERMESSAGE  = '[B][COLOR dodgerblue]Aftermath[/COLOR][/B] Wizard'
+HEADERMESSAGE  = 'The Joe Wizard'
 # url to image if using Image 424x180
 HEADERIMAGE    = 'http://'
 # Font for Notification Window
